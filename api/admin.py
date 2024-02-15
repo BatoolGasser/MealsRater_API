@@ -4,7 +4,7 @@ from .models import Meal, Rating
 
 # Register your models here.
 class RatingAdmin(admin.ModelAdmin):
-    list_display = ['id', 'meal', 'user', 'Rating']
+    list_display = ['id', 'meal', 'user', 'stars']
     list_filter = ['meal', 'user']
 
 

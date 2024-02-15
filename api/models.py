@@ -29,7 +29,7 @@ class Rating(models.Model):
     )
     meal = models.ForeignKey(Meal, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    Rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    stars = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
 
     class Meta:
         unique_together = ('user', 'meal')
